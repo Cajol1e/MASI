@@ -1,0 +1,155 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						6,
+						7
+					]
+				},
+				{
+					"build" : "examples",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "ncnn",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "benchflexnn::@714eac15f71a94114fdf",
+					"jsonFile" : "target-benchflexnn-Debug-31f968178b4e4086b82d.json",
+					"name" : "benchflexnn",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "flexnndemo::@714eac15f71a94114fdf",
+					"jsonFile" : "target-flexnndemo-Debug-5e767b6136180ecbaf69.json",
+					"name" : "flexnndemo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "flexnnprofile::@714eac15f71a94114fdf",
+					"jsonFile" : "target-flexnnprofile-Debug-1cd2073400649f74555c.json",
+					"name" : "flexnnprofile",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "flexnnschedule::@714eac15f71a94114fdf",
+					"jsonFile" : "target-flexnnschedule-Debug-c3101ae909a858f35464.json",
+					"name" : "flexnnschedule",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "flexnnslice::@714eac15f71a94114fdf",
+					"jsonFile" : "target-flexnnslice-Debug-e1531fb21baee148e881.json",
+					"name" : "flexnnslice",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "layertest::@714eac15f71a94114fdf",
+					"jsonFile" : "target-layertest-Debug-d765eb12466ca6e9b90c.json",
+					"name" : "layertest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ncnn::@145eef247bfb46b6828c",
+					"jsonFile" : "target-ncnn-Debug-ae02ace73d5103b233be.json",
+					"name" : "ncnn",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ncnn-generate-spirv::@145eef247bfb46b6828c",
+					"jsonFile" : "target-ncnn-generate-spirv-Debug-9f50d503164c6be7ba45.json",
+					"name" : "ncnn-generate-spirv",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/root/flexnn_debug",
+		"source" : "/root/.vs/my_flexnn/eb939558-def0-49ff-a12e-3fab0559a7e2/src"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
