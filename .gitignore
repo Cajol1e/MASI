@@ -1,3 +1,16 @@
+# Models
+models/*
+
+# Temp folder
+tmp
+results*
+
+# CMake build directory
+build*/
+
+# Backup files.
+*~
+
 # Prerequisites
 *.d
 
@@ -10,12 +23,6 @@
 # Precompiled Headers
 *.gch
 *.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
 
 # Compiled Dynamic libraries
 *.so
@@ -37,5 +44,26 @@
 *.out
 *.app
 
-# debug information files
-*.dwo
+# MACOSX
+.DS_Store
+
+# IDE
+.vs
+.vscode
+.idea
+cmake-build-debug
+cmake-build-release
+CMakeSettings.json
+
+# Compiled python
+__pycache__
+*.pyc
+*.pyd
+*.egg-info/
+python/setup.py
+
+# Clangd
+.cache/
+
+# Xmake
+.xmake/
