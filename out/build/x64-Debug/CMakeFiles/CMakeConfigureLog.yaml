@@ -1,0 +1,679 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:40 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:40 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: D:/vstudio/vstudio2022/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/cl.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.43.34809 版
+      版权所有(C) Microsoft Corporation。保留所有权利。
+      
+      CMakeCCompilerId.c
+      Microsoft (R) Incremental Linker Version 14.43.34809.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      /out:CMakeCCompilerId.exe 
+      CMakeCCompilerId.obj 
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/3.30.5-msvc23/CompilerIdC/CMakeCCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1243 (message)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:40 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        main.c
+        注意: 包含文件:  D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "注意: 包含文件:  "
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:40 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: D:/vstudio/vstudio2022/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/cl.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.43.34809 版
+      版权所有(C) Microsoft Corporation。保留所有权利。
+      
+      CMakeCXXCompilerId.cpp
+      Microsoft (R) Incremental Linker Version 14.43.34809.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      /out:CMakeCXXCompilerId.exe 
+      CMakeCXXCompilerId.obj 
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/3.30.5-msvc23/CompilerIdCXX/CMakeCXXCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:1243 (message)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:40 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        main.c
+        注意: 包含文件:  D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "注意: 包含文件:  "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:40 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-f3wal9"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-f3wal9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-f3wal9'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_42a8c
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_42a8c.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_42a8c.dir\\ /FS -c D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_42a8c.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_42a8c.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_42a8c.exe /implib:cmTC_42a8c.lib /pdb:cmTC_42a8c.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:40 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': D:/vstudio/vstudio2022/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:40 (project)"
+    message: |
+      Running the C compiler's linker: "D:/vstudio/vstudio2022/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.43.34809.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:40 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-mncpn5"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-mncpn5"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-mncpn5'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_afb5e
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_afb5e.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_afb5e.dir\\ /FS -c D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_afb5e.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_afb5e.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_afb5e.exe /implib:cmTC_afb5e.lib /pdb:cmTC_afb5e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:40 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': D:/vstudio/vstudio2022/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:40 (project)"
+    message: |
+      Running the CXX compiler's linker: "D:/vstudio/vstudio2022/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.43.34809.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:140 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test NCNN_COMPILER_SUPPORT_GNU_INLINE_ASM"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-muj5xc"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-muj5xc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "NCNN_COMPILER_SUPPORT_GNU_INLINE_ASM"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-muj5xc'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_0ef3a
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNCNN_COMPILER_SUPPORT_GNU_INLINE_ASM  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_0ef3a.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_0ef3a.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-muj5xc\\src.cxx
+        FAILED: CMakeFiles/cmTC_0ef3a.dir/src.cxx.obj 
+        D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNCNN_COMPILER_SUPPORT_GNU_INLINE_ASM  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_0ef3a.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_0ef3a.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-muj5xc\\src.cxx
+        D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-muj5xc\\src.cxx(1): error C2059: 语法错误:“volatile”
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:362 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test NCNN_COMPILER_SUPPORT_X86_AVX"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hr647x"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hr647x"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "NCNN_COMPILER_SUPPORT_X86_AVX"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hr647x'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_7242e
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNCNN_COMPILER_SUPPORT_X86_AVX  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd   /arch:AVX /showIncludes /FoCMakeFiles\\cmTC_7242e.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_7242e.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-hr647x\\src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_7242e.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7242e.dir\\src.cxx.obj  /out:cmTC_7242e.exe /implib:cmTC_7242e.lib /pdb:cmTC_7242e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:363 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test NCNN_COMPILER_SUPPORT_X86_FMA"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-yzoqns"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-yzoqns"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "NCNN_COMPILER_SUPPORT_X86_FMA"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-yzoqns'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_b7e5b
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNCNN_COMPILER_SUPPORT_X86_FMA  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd   /arch:AVX /showIncludes /FoCMakeFiles\\cmTC_b7e5b.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_b7e5b.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yzoqns\\src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_b7e5b.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b7e5b.dir\\src.cxx.obj  /out:cmTC_b7e5b.exe /implib:cmTC_b7e5b.lib /pdb:cmTC_b7e5b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:364 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test NCNN_COMPILER_SUPPORT_X86_XOP"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hcoqhg"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hcoqhg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "NCNN_COMPILER_SUPPORT_X86_XOP"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hcoqhg'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_4d52c
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNCNN_COMPILER_SUPPORT_X86_XOP  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd   /arch:AVX /showIncludes /FoCMakeFiles\\cmTC_4d52c.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_4d52c.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-hcoqhg\\src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_4d52c.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4d52c.dir\\src.cxx.obj  /out:cmTC_4d52c.exe /implib:cmTC_4d52c.lib /pdb:cmTC_4d52c.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:365 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test NCNN_COMPILER_SUPPORT_X86_F16C"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-vodvue"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-vodvue"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "NCNN_COMPILER_SUPPORT_X86_F16C"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-vodvue'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_1245a
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNCNN_COMPILER_SUPPORT_X86_F16C  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd   /arch:AVX /showIncludes /FoCMakeFiles\\cmTC_1245a.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_1245a.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-vodvue\\src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_1245a.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_1245a.dir\\src.cxx.obj  /out:cmTC_1245a.exe /implib:cmTC_1245a.lib /pdb:cmTC_1245a.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:366 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test NCNN_COMPILER_SUPPORT_X86_AVX2"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hs581n"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hs581n"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "NCNN_COMPILER_SUPPORT_X86_AVX2"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-hs581n'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_96d5b
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNCNN_COMPILER_SUPPORT_X86_AVX2  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd   /arch:AVX2 /showIncludes /FoCMakeFiles\\cmTC_96d5b.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_96d5b.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-hs581n\\src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_96d5b.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_96d5b.dir\\src.cxx.obj  /out:cmTC_96d5b.exe /implib:cmTC_96d5b.lib /pdb:cmTC_96d5b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:367 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test NCNN_COMPILER_SUPPORT_X86_AVX_VNNI"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-u0e05e"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-u0e05e"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "NCNN_COMPILER_SUPPORT_X86_AVX_VNNI"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-u0e05e'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_b9143
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNCNN_COMPILER_SUPPORT_X86_AVX_VNNI  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd   /arch:AVX2 /showIncludes /FoCMakeFiles\\cmTC_b9143.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_b9143.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-u0e05e\\src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_b9143.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b9143.dir\\src.cxx.obj  /out:cmTC_b9143.exe /implib:cmTC_b9143.lib /pdb:cmTC_b9143.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:368 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test NCNN_COMPILER_SUPPORT_X86_AVX512"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ji5wrv"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ji5wrv"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "NCNN_COMPILER_SUPPORT_X86_AVX512"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ji5wrv'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_a7a73
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNCNN_COMPILER_SUPPORT_X86_AVX512  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd   /arch:AVX512 /showIncludes /FoCMakeFiles\\cmTC_a7a73.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_a7a73.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-ji5wrv\\src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_a7a73.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a7a73.dir\\src.cxx.obj  /out:cmTC_a7a73.exe /implib:cmTC_a7a73.lib /pdb:cmTC_a7a73.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:369 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test NCNN_COMPILER_SUPPORT_X86_AVX512_VNNI"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-si6112"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-si6112"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "NCNN_COMPILER_SUPPORT_X86_AVX512_VNNI"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-si6112'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_9f226
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DNCNN_COMPILER_SUPPORT_X86_AVX512_VNNI  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd   /arch:AVX512 /showIncludes /FoCMakeFiles\\cmTC_9f226.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_9f226.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-si6112\\src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_9f226.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_9f226.dir\\src.cxx.obj  /out:cmTC_9f226.exe /implib:cmTC_9f226.lib /pdb:cmTC_9f226.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckSourceCompiles.cmake:77 (cmake_check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/GenerateExportHeader.cmake:206 (check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/GenerateExportHeader.cmake:263 (_check_cxx_compiler_attribute)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/GenerateExportHeader.cmake:420 (_test_compiler_has_deprecated)"
+      - "src/CMakeLists.txt:205 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_DEPRECATED_ATTR"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gw6ux1"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gw6ux1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "COMPILER_HAS_DEPRECATED_ATTR"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-gw6ux1'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_7d193
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DCOMPILER_HAS_DEPRECATED_ATTR  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_7d193.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_7d193.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gw6ux1\\src.cxx
+        FAILED: CMakeFiles/cmTC_7d193.dir/src.cxx.obj 
+        D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DCOMPILER_HAS_DEPRECATED_ATTR  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_7d193.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_7d193.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gw6ux1\\src.cxx
+        D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gw6ux1\\src.cxx(1): error C2065: “__deprecated__”: 未声明的标识符
+        D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gw6ux1\\src.cxx(1): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+        D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gw6ux1\\src.cxx(1): error C2062: 意外的类型“int” 
+        D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gw6ux1\\src.cxx(1): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+        D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gw6ux1\\src.cxx(1): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+        D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-gw6ux1\\src.cxx(2): error C3861: “somefunc”: 找不到标识符
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckSourceCompiles.cmake:77 (cmake_check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/GenerateExportHeader.cmake:206 (check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/GenerateExportHeader.cmake:269 (_check_cxx_compiler_attribute)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/GenerateExportHeader.cmake:420 (_test_compiler_has_deprecated)"
+      - "src/CMakeLists.txt:205 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_DEPRECATED"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-qfnjct"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-qfnjct"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "COMPILER_HAS_DEPRECATED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-qfnjct'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_4d651
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DCOMPILER_HAS_DEPRECATED  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_4d651.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_4d651.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-qfnjct\\src.cxx
+        D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-qfnjct\\src.cxx(2): warning C4996: 'somefunc': 被声明为已否决
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_4d651.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_4d651.dir\\src.cxx.obj  /out:cmTC_4d651.exe /implib:cmTC_4d651.lib /pdb:cmTC_4d651.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindOpenMP.cmake:238 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindOpenMP.cmake:506 (_OPENMP_GET_FLAGS)"
+      - "src/CMakeLists.txt:226 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-rftl4e"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-rftl4e"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_openmp"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-rftl4e'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_5f2de
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -openmp /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_5f2de.dir\\OpenMPTryFlag.c.obj /FdCMakeFiles\\cmTC_5f2de.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-rftl4e\\OpenMPTryFlag.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_5f2de.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_5f2de.dir\\OpenMPTryFlag.c.obj  /out:cmTC_5f2de.exe /implib:cmTC_5f2de.lib /pdb:cmTC_5f2de.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindOpenMP.cmake:238 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindOpenMP.cmake:506 (_OPENMP_GET_FLAGS)"
+      - "src/CMakeLists.txt:226 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-o9pvnv"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-o9pvnv"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_openmp"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-o9pvnv'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_47b0b
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -openmp /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_47b0b.dir\\OpenMPTryFlag.cpp.obj /FdCMakeFiles\\cmTC_47b0b.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-o9pvnv\\OpenMPTryFlag.cpp
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_47b0b.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_47b0b.dir\\OpenMPTryFlag.cpp.obj  /out:cmTC_47b0b.exe /implib:cmTC_47b0b.lib /pdb:cmTC_47b0b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindOpenMP.cmake:440 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindOpenMP.cmake:580 (_OPENMP_GET_SPEC_DATE)"
+      - "src/CMakeLists.txt:226 (find_package)"
+    description: "Detecting C OpenMP version"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7u3fyj"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7u3fyj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "OpenMP_SPECTEST_C_"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-7u3fyj'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_98fe6
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -openmp /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_98fe6.dir\\OpenMPCheckVersion.c.obj /FdCMakeFiles\\cmTC_98fe6.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-7u3fyj\\OpenMPCheckVersion.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_98fe6.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_98fe6.dir\\OpenMPCheckVersion.c.obj  /out:cmTC_98fe6.exe /implib:cmTC_98fe6.lib /pdb:cmTC_98fe6.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindOpenMP.cmake:440 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindOpenMP.cmake:580 (_OPENMP_GET_SPEC_DATE)"
+      - "src/CMakeLists.txt:226 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-xjr26p"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-xjr26p"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-xjr26p'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_25ce1
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -openmp /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_25ce1.dir\\OpenMPCheckVersion.cpp.obj /FdCMakeFiles\\cmTC_25ce1.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-xjr26p\\OpenMPCheckVersion.cpp
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_25ce1.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_25ce1.dir\\OpenMPCheckVersion.cpp.obj  /out:cmTC_25ce1.exe /implib:cmTC_25ce1.lib /pdb:cmTC_25ce1.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "src/CMakeLists.txt:259 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-kib5ew"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-kib5ew"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-kib5ew'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_37a10
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_37a10.dir\\src.c.obj /FdCMakeFiles\\cmTC_37a10.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-kib5ew\\src.c
+        FAILED: CMakeFiles/cmTC_37a10.dir/src.c.obj 
+        D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_37a10.dir\\src.c.obj /FdCMakeFiles\\cmTC_37a10.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-kib5ew\\src.c
+        D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-kib5ew\\src.c(1): fatal error C1083: 无法打开包括文件: “pthread.h”: No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "src/CMakeLists.txt:259 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-2tgomb"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-2tgomb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-2tgomb'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_72062
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_72062.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_72062.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-2tgomb\\CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_72062.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_72062.dir\\CheckFunctionExists.c.obj  /out:cmTC_72062.exe /implib:cmTC_72062.lib /pdb:cmTC_72062.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_72062.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_72062.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_72062.dir\\CheckFunctionExists.c.obj  /out:cmTC_72062.exe /implib:cmTC_72062.lib /pdb:cmTC_72062.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_72062.dir\\CheckFunctionExists.c.obj /out:cmTC_72062.exe /implib:cmTC_72062.lib /pdb:cmTC_72062.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_72062.dir/intermediate.manifest CMakeFiles\\cmTC_72062.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: 无法打开文件“pthreads.lib”\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "D:/vstudio/vstudio2022/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.30/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "src/CMakeLists.txt:259 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-we227n"
+      binary: "D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-we227n"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/material/other/my_flexnn/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-we227n'
+        
+        Run Build Command(s): d:\\vstudio\\vstudio2022\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_b8f09
+        [1/2] D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_b8f09.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_b8f09.dir\\ /FS -c D:\\material\\other\\my_flexnn\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-we227n\\CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_b8f09.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b8f09.dir\\CheckFunctionExists.c.obj  /out:cmTC_b8f09.exe /implib:cmTC_b8f09.lib /pdb:cmTC_b8f09.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_b8f09.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\vstudio\\vstudio2022\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_b8f09.dir --rc="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\rc.exe" --mt="D:\\Windows Kits\\10\\bin\\10.0.22621.0\\x64\\mt.exe" --manifests  -- D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b8f09.dir\\CheckFunctionExists.c.obj  /out:cmTC_b8f09.exe /implib:cmTC_b8f09.lib /pdb:cmTC_b8f09.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "D:\\vstudio\\vstudio2022\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b8f09.dir\\CheckFunctionExists.c.obj /out:cmTC_b8f09.exe /implib:cmTC_b8f09.lib /pdb:cmTC_b8f09.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_b8f09.dir/intermediate.manifest CMakeFiles\\cmTC_b8f09.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: 无法打开文件“pthread.lib”\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...

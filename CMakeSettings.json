@@ -1,0 +1,61 @@
+﻿{
+    "configurations": [
+        {
+            "name": "Linux-GCC-Debug-Flexnn",
+            "generator": "Ninja",
+            "configurationType": "Debug",
+            "cmakeExecutable": "cmake",
+            "remoteCopySourcesExclusionList": [ ".vs", ".git", "out" ],
+            "cmakeCommandArgs": "",
+            "buildCommandArgs": "",
+            "ctestCommandArgs": "",
+            "inheritEnvironments": [ "linux_x64" ],
+            "remoteMachineName": "-418445781;192.168.181.132 (username=tecl, port=22, authentication=Password)",
+            "remoteCMakeListsRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/src",
+            "remoteBuildRoot": "/home/tecl/Flexnn/FlexnnDebug",
+            "remoteInstallRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/install/${name}",
+            "remoteCopySources": true,
+            "rsyncCommandArgs": "-t --delete",
+            "remoteCopyBuildOutput": false,
+            "remoteCopySourcesMethod": "rsync"
+        },
+        {
+            "name": "ubuntu-arm-GCC-Debug",
+            "generator": "Ninja",
+            "configurationType": "Debug",
+            "cmakeExecutable": "cmake",
+            "remoteCopySourcesExclusionList": [ ".vs", ".git", "out" ],
+            "cmakeCommandArgs": "",
+            "buildCommandArgs": "",
+            "ctestCommandArgs": "",
+            "inheritEnvironments": [ "linux_x64" ],
+            "remoteMachineName": "-494291022;47.98.243.128 (username=root, port=22, authentication=Password)",
+            "remoteCMakeListsRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/src",
+            "remoteBuildRoot": "/home/root/flexnn_debug",
+            "remoteInstallRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/install/${name}",
+            "remoteCopySources": true,
+            "rsyncCommandArgs": "-t --delete",
+            "remoteCopyBuildOutput": false,
+            "remoteCopySourcesMethod": "rsync"
+        },
+        {
+            "name": "nx-arm",
+            "generator": "Ninja",
+            "configurationType": "Debug",
+            "cmakeExecutable": "cmake",
+            "remoteCopySourcesExclusionList": [ ".vs", ".git", "out" ],
+            "cmakeCommandArgs": "",
+            "buildCommandArgs": "",
+            "ctestCommandArgs": "",
+            "inheritEnvironments": [ "linux_arm" ],
+            "remoteMachineName": "850951421;192.168.10.104 (username=nx, port=22, authentication=Password)",
+            "remoteCMakeListsRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/src",
+            "remoteBuildRoot": "/home/tecl/debug",
+            "remoteInstallRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/install/${name}",
+            "remoteCopySources": true,
+            "rsyncCommandArgs": "-t --delete",
+            "remoteCopyBuildOutput": false,
+            "remoteCopySourcesMethod": "rsync"
+        }
+    ]
+}
