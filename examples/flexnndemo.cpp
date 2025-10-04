@@ -1231,7 +1231,7 @@ int run_infer_flexnn_random_data(int memory_budget, int loop)
 
 int main(int argc, char** argv)
 {
-    fprintf(stderr, "Usage: %s --<ncnn_param> <ncnn_bin> <flexnn_param> <input_shape> <flexnn_bin> <result_path> <data_path> <conv_sz> <fc_sz> <memory_budgets> <loop_num> <log_num> <mode> <timestep> <record> <seenn_threshold> <idle_duration>\n", argv[0]);
+    fprintf(stderr, "Usage: %s --<ncnn_param> <ncnn_bin> <flexnn_param> <input_shape> <flexnn_bin> <result_path> <data_path> <conv_sz> <fc_sz> <memory_budgets> <loop_num> <log_num> <mode> <timestep> <record> <seenn_threshold> <waittime> <jump> <sampletime>\n", argv[0]);
 
     const long long m = 1e6; 
 
@@ -1348,6 +1348,10 @@ int main(int argc, char** argv)
     {
         jump = std::atoi(argMap["jump"].c_str());
         printf("get jump : %d .\n", jump);
+    }
+
+    if (jump > 1) {
+        mode = "ncnn_ondemand";
     }
 
     

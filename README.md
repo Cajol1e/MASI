@@ -8,9 +8,9 @@ Please refer to [Evaluation.md](Evaluation.md) for detailed instructions to eval
 
 ## Introduction
 
-FlexNN is  an adaptive memory management framework for on-device SNNs under dynamic memory constraints.
+MASI is  an adaptive memory management framework for on-device SNNs under dynamic memory constraints.
 
-For a given memory budget and DNN model, MASI uses a memory-adaptive slicing strategy to partition bottleneck layers, a timestep-agnostic scheduler that maximizes memory utilization while avoiding the overhead of per-timestep planning, and a timestep-aware early-exit mechanism that skips redundant timesteps to accelerate inference.
+For a given memory budget and SNN model, MASI uses a memory-adaptive slicing strategy to partition bottleneck layers, a timestep-agnostic scheduler that maximizes memory utilization while avoiding the overhead of per-timestep planning, and a timestep-aware early-exit mechanism that skips redundant timesteps to accelerate inference.
 With the support of these mechanisms,MASI dynamically adapts to varying memory budgets with minimal overhead, enabling efficient, responsive,
 and scalable on-device SNN inference.
 
@@ -32,7 +32,7 @@ For more details, please refer to our [paper]().
 
 MASI is built atop [NCNN](https://github.com/Tencent/ncnn), which is a high-performance Neural Network inference framework optimized for the mobile platform. It is implemented and best-optimized for floating-point CNN inference on ARMv8 CPUs.
 
-With a given memory budget and DNN model, MASI flexibly slices the model and plans memory allocations and the execution order. The complete steps of `flexnndemo` are listed as follows:
+With a given memory budget and SNN model, MASI flexibly slices the model and plans memory allocations and the execution order. The complete steps of `flexnndemo` are listed as follows:
 
 - Offline Planning
   - Layer Slicing - implemented in `run_slice`.
