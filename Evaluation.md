@@ -1,10 +1,10 @@
 # FlexNN Evaluation Guide
 
-This is the artifact evaluation guide for MobiCom 2024 paper *"FlexNN: Efficient and Adaptive DNN Inference on Memory-Constrained Edge Devices"*.
+This is the artifact evaluation guide for paper *"MASI: Memory-Adaptive Inference Framework for Spiking Neural Networks on Edge Devices"*.
 
-In this paper, we proposed FlexNN, an efficient and adaptive memory management framework for DNN inference on memory-constrained devices. FlexNN uses a slicing-loading-computing joint planning approach, to achieve optimal memory utilization and minimal memory management overhead.
+In this paper, we proposed MASI, an adaptive memory management framework for on-device SNNs under dynamic memory constraints. MASI uses a memory-adaptive slicing strategy to partition bottleneck layers, a timestep-agnostic scheduler that maximizes memory utilization while avoiding the overhead of per-timestep planning, and a timestep-aware early-exit mechanism that skips redundant timesteps to accelerate inference.
 
-We implemented FlexNN atop [NCNN](https://github.com/Tencent/ncnn), and conducted comprehensive evaluations with common model architectures on various devices. This documentation describes the complete workflow of FlexNN, and provides detailed instructions to build, deploy, and evaluate FlexNN on your device.
+We implemented MASI atop [NCNN](https://github.com/Tencent/ncnn), and conducted comprehensive evaluations with common model architectures on various devices. This documentation describes the complete workflow of MASI, and provides detailed instructions to build, deploy, and evaluate MASI on your device.
 
 ## Preparation
 
@@ -14,73 +14,58 @@ The complete evaluation will cost about 2~3 hours.
 
 To conduct the complete evaluation, it is recommended that you have:
 
-- *(Optional since we provide alternative ways other than building from source)* a **host machine** (e.g., a PC) to build FlexNN and process raw results, meeting the following requirements.
+- *(Optional since we provide alternative ways other than building from source)* a **host machine** (e.g., a PC) to build MASI and process raw results, meeting the following requirements.
   - Hardware:
     - x86-64 CPUs.
     - Available RAM >= 2GB.
     - Available Disk >= 4GB.
   - OS: Ubuntu
   - Libs: git, cmake, g++, protobuf, OpenMP.
-  - Tools: ADB (for Android target), or SSH and SFTP (for Linux target).
-- A **target device** (e.g., a smartphone) to deploy and evaluation FlexNN, meeting the following requirements:
+  - Tools: ADB (for Android target), or SSH (for Linux target).
+- A **target device** (e.g., a smartphone) to deploy and evaluation MASI, meeting the following requirements:
   - Hardware:
     - ARMv8 CPUs (>= 2 cores).
     - Available RAM >= 2GB.
     - Available Storage >= 3GB.
   - OS: Ubuntu/Android with root access.
 
-Note that FlexNN should also support other hardware and software configurations, but the provided workflows and scripts are verified only with the above configuration.
+Note that MASI should also support other hardware and software configurations, but the provided workflows and scripts are verified only with the above configuration.
 
 ### Necessary Files
 
-All necessary files to evaluate FlexNN have been uploaded to a Google Drive folder. [[Share Link]](https://drive.google.com/drive/folders/1msaJ7KZ4DGfcgn9bYSMlLUombRuaQZGH?usp=sharing) Files include:
+All necessary files to evaluate FlexNN have been uploaded to a zip. [[Share Link]]() Files include:
 
-- **models.zip**: DNN models required during evaluation. About 2.5GB in total after unzipping.
-- *(Optional)* **prebuilt.zip**: Pre-built binaries of FlexNN.
-- *(Optional)* **docker_flexnn.tar**: Docker image for building FlexNN and processing results. About 1GB.
+- **models**: SNN models required during evaluation. About 2GB in total.
+- *(Optional)* **prebuilt**: Pre-built binaries (Linux/Android) of MASI.
 
 ## Overview
 
-### FlexNN Workflow
+### MASI Workflow
 
-With a given memory budget and DNN model, FlexNN flexibly slices the model and plans memory allocations and the execution order. The complete workflow contains the following steps (details in $\S 3$ in the paper):
+With a given memory budget and SNN model, MASI flexibly slices the model and plans memory allocations and the execution order. The complete workflow contains the following steps (details in $\S 3$ in the paper):
 
 - Offline Planning
-  - Layer Slicing - implemented in `flexnnslice`.
-    - Input: memory, model.
-    - Output: sliced model.
-  - Memory Profiling - implemented in `flexnnprofile`.
-    - Input: sliced model.
-    - Output: profiles.
-  - Memory Planning - implemented in `flexnnschedule`.
-    - Input: profiles.
-    - Output: plans (dependencies and allocations).
+  - Layer Slicing - implemented in `run_slice`.
+  - Memory Profiling - implemented in `run_profile`.
+  - Memory Planning - implemented in `run_schedule`.
 - Online Execution
-  - Model Inference - implemented in `benchflexnn`.
-    - Input: memory, model, plans.
-    - Output: inference results.
-
-Currently, we only test the system performance.
+  - Model Inference - implemented in `run_infer_flexnn_random_data/run_infer_flexnn_random_data/run_infer_flexnn`.
 
 ### Evaluation Steps
 
-The evaluation of FlexNN involves the following steps:
+The evaluation of MASI involves the following steps:
 
-- [Building](#building): we provide 3 options for you to build FlexNN
+- [Building](#building): we provide 2 options for you to build MASI
   - Pre-built binaries.
-  - Build with the Docker image.
   - Build with your own environment.
 - [Deploying](#deployment): we provide 2 options to push files to different target OS
   - ADB for Android.
-  - SSH & SFTP for Linux.
-- [Conducting Experiments](#evaluation): there are 4 different groups of experiments, each with a kick-and-run script.
-  - End-to-end comparison.
-  - System overhead measurement.
-  - Ablation study.
-  - Adaptive demo.
-- [Processing Raw Results](#post-processing): we provide Python scripts for data processing and visualization.
-
-Note that the building and post-processing processes are done on a **host machine**, while the experiments are conducted on the target **mobile/edge device**.
+  - SSH for Linux.
+- [Conducting Experiments](#evaluation): there are 4 different groups of experiments, you can verify them by setting some specific parameters.
+  - latency-memory-tradeoff comparison.
+  - power monitoring.
+  - MASI ablation study.
+  - Real-time latency and memory usage monitoring.
 
 ## Building
 
@@ -88,64 +73,22 @@ Before continuing, ensure that you have **downloaded the [necessary files](#nece
 
 ### Pre-built Binaries
 
-The pre-built binaries are provided together with their building folders. After downloading and unzipping them, directly **copy the folders to the root directory** of FlexNN. For example:
+The pre-built binaries are provided together with their building folders. After downloading and unzipping them, directly **copy the folders to the root directory** of MASI. For example:
 
 ```bash
 # Android build
-cp -r prebuilt/build-android-aarch <flexnn-root-dir>
+cp -r predata/build-android-aarch <flexnn-root-dir>
 # Linux build
-cp -r prebuilt/build-aarch64-linux-gnu <flexnn-root-dir> 
+cp -r predata/build-aarch64-linux-gnu <flexnn-root-dir> 
 ```
 
 This is to ensure that our scripts to push files to the target device can work as expected. After this, **go ahead to [deploying](#deployment).**
 
-### Build with Docker
-
-We provide a Ubuntu 20.04 Docker image with all dependencies installed. **Note that the image can only run on x86_64 machines.** If you use others including Mac with Apple silicon, consider using the pre-built binaries.
-
-After [installing Docker](https://docs.docker.com/engine/install/) and downloading the provided Docker image, you can [load the provided image](https://docs.docker.com/reference/cli/docker/image/load/), and then start a container that mounts the FlexNN root directory. For example:
-
-```bash
-docker run -it -v <flexnn-root-dir>:/FlexNN <image_id>
-cd /FlexNN
-```
-
-This will bring you into an interactive shell. Then, run the scripts to build for different platforms, according to your target device.
-
-```bash
-# In <flexnn-root-dir>
-chmod -R 0777 ./scripts/host/
-
-# Build for Android with NDK
-./scripts/host/build-android-aarch64.sh
-
-# Build for others with GNU toolchain 
-./scripts/host/build-aarch64-linux-gnu.sh
-```
-
-In the end, you should be able to find the binaries in `<build-target>/install/bin`.
-
-### Build from Scratch
-
-If both of the above approaches failed, or if you are interested in further customizing the building process, you can also build FlexNN from scratch. Nevertheless, we recommend building with either native Linux or a Linux VM (including WSL).
-
-FlexNN depends on : git, cmake, g++, protobuf, OpenMP.
-
-On Ubuntu 20.04+, run:
-
-```bash
-sudo apt install build-essential git cmake libprotobuf-dev protobuf-compiler libomp-dev
-```
-
-Then follow the steps in [Build with Docker](#build-with-docker).
-
-To further customize the building process for different platforms, **which might require considerable efforts to deal with potential bugs**, please refer to [NCNN's how-to-build guide](https://github.com/Tencent/ncnn/wiki/how-to-build) since FlexNN basically shares the same dependencies and building processes. The main difference is that we only implement for ARMv8-A (aarch64) CPUs now, so Vulkan building options are always turned off.
-
 ## Deployment
 
-Deploying FlexNN to the device involves pushing all the required binaries, models, and scripts to the device, and setting up the workspace on the device side. Before continuing with this step, **ensure that you have downloaded and unzipped the model files**, and put the `models` folder in `<flexnn-root-dir>`.
+Deploying MASI to the device involves pushing all the required binaries, models, and scripts to the device, and setting up the workspace on the device side. Before continuing with this step, **ensure that you have downloaded and unzipped the model files**, and put the `models` folder in `<flexnn-root-dir>`.
 
-The total size of the files is around 2.5 GB. The required time may vary from seconds to minutes, depending on how you connect to the device (e.g., USB, Wi-Fi, etc). We've provided scripts to push all the necessary files to the target device.
+The total size of the files is around 2 GB. The required time may vary from seconds to minutes, depending on how you connect to the device (e.g., USB, Wi-Fi, etc). We've provided scripts to push all the necessary files to the target device, or you can follow the script command to push the files when it fails.
 
 ### Android Script
 
@@ -190,85 +133,48 @@ Otherwise the scripts might not run the experiments normally.
 
 ## Execution
 
-In this part, we will introduce the usage of each individual binary as mentioned in [FlexNN Workflow](#flexnn-workflow), and provide an example to automatically run the workflow. **If you are looking for steps to run the experiments, head directly to the [Evaluation](#evaluation) part.**
+In this part, we will introduce the usage of binary as mentioned in [MASI Workflow](#masi-workflow), and provide an example to automatically run the workflow. **If you are looking for steps to run the experiments, head directly to the [Evaluation](#evaluation) part.**
 
-Typically, to slice, plan, and inference under a given memory budget, the user should run `flexnnslice`, `flexnnprofile`, `flexnnschedule`, and `benchflexnn` sequentially. In most cases, for a new memory budget, only `flexnnschedule` and `benchflexnn` need to be executed again (as is shown in `flexnndemo`), unless the earlier sliced model doesn't fit into the new memory budget.
-
-Besides, we provide scripts (e.g., `run-flexnn.sh`) that automate the complete workflow with a given model name and memory budget ([usage here](#scripts-usage)). Since executing the binaries individually will involve a lot of intermediate files and annoying arguments to type. **We strongly recommend that you run with the script.**
+Typically, to slice, plan, and inference under a given memory budget, the user should run `flexnndemo` with specific parameters. In most cases, for some memory budget, `flexnndemo` need to be executed again with a set of more proper parameters to ensure the program run correctly.
 
 ### Binaries Usage
-
-Usage of `flexnnslice`:
-
-```bash
-usage: ./bin/flexnnslice <inparam> <inbin> <outparam> <outbin> <flag> [<conv_sz> <fc_sz>]
-```
-
-Usage of `flexnnprofile`:
-
-```bash
-Usage: ./bin/flexnnprofile <model_prefix> [<key=value>...]
-  model_prefix: the model path w/o .param or .bin postfix
-  memory_profile_path=model_prefix.memprof
-  time_profile_path=model_prefix.timeprof
-  num_threads=1
-  inputshape=[1,3,224,224]
-  vocab_path=
-Example: ./bin/flexnnprofile ~/models/flexnn/vgg19.flexnn loop_count=4 warmup_loop_count=0
-```
-
-Usage of `flexnnschedule`:
-
-```bash
-Usage: ./bin/flexnnschedule <memory_profile_path> <time_profile_path> <malloc_plan_path> <layer_dependency_path> <memory_budget> [<skip count> <memory_layout_path>]
-```
-
-Usage of `benchflexnn`:
-
-```bash
-Usage: ./bin/benchflexnn <model_prefix> [<key=value>...]
-  model_prefix: the model path w/o .param or .bin postfix
-  loop_count=8
-  warmup_loop_count=4
-  cooling_down_duration=0 (s)
-  num_threads=1
-  computing_powersave=2
-  loading_powersave=3
-  input_shape=[1,3,224,224]
-  cmp_model_prefix=
-  config=ncnn_parallel
-  malloc_plan_path=
-  layer_dependency_path=
-  time_profile_path=
-  memory_budget=-1
-  vocab_path=
-Example: ./bin/benchflexnn ~/models/flexnn/vgg19.flexnn loop_count=4 warmup_loop_count=0
-```
 
 Usage of `flexnndemo`:
 
 ```bash
-Usage: ./bin/flexnndemo <ncnn_param> <ncnn_bin> <flexnn_param> <flexnn_bin> <result_path> [<idle_duration>]
+Usage: ./bin/flexnndemo --<ncnn_param> [--<key value>...]
+  --ncnn_param the path of ncnn.param file
+  --ncnn_bin the path of ncnn.bin file
+  --flexnn_param the path to save flexnn.param file
+  --flexnn_bin the path to save flexnn.bin file
+  --input_shape the input shape of the model, e.g., [1,3,32,32]
+  --result_path the path to save profile and schedule result files
+  --data_path the path to load dataset data file (if the data path is none, MASI will use random data to infer)
+  --conv_sz the size limitation of convolutional layers
+  --fc_sz the size limitation of fully-connected layers
+  --memory_budgets the size of each runtime memory limitations
+  --loop_num the number of loops to run inference for each config
+  --log_num the number of loop number to log
+  --mode the mode to run flexnndemo, including:
+    - normal: run inference after layer slicing, memory profiling, and memory scheduling
+    - ncnn_default: run inference by ncnn default method
+    - ncnn_direct_conv: run inference directly 
+    - ncnn_ondemand: run inerence on-demand 
+  --timestep timestep number for each inference
+  --record the record level, including:
+    - 0: no record
+    - 1: record memory and energy usage info into memory_energy file, record input inference info inference file
+    - 2: record event info into memory_energy file
+  --seenn_threshold the threshold parameter to exit early
+  --waittime the waiting duration
+  --sampletime the time between two sample node
+  --jump the jump level will be use in the ablation experiment:
+    - 0: no jump
+    - 1: jump preloading part
+    - 2: jump memory scheduling part
+
+Example: ./flexnndemo --ncnn_param /home/user/models/ncnn/sewresnet18.ncnn.param --ncnn_bin /home/user/models/ncnn/sewresnet18.ncnn.bin --flexnn_param /home/user/models/flexnn/sewresnet18.flexnn.param --flexnn_bin /home/user/models/flexnn/sewresnet18.flexnn.bin --result_path /home/user/results/ --conv_sz 20 --fc_sz 10 --loop_num 32 --log_num 1 --mode normal --seenn_threshold 0.3 --input_shape [1,1,128,128] --timestep 10 --waittime 300000000 --sampletime 50000 --record 2 --memory_budgets 24,134,68,180
 ```
-
-### Scripts Usage
-
-We automate the complete workflow through `run-flexnn.sh`. For example, If you want to inference VGG-19 under a 100 MB memory limit, run:
-
-```bash
-./run-flexnn.sh vgg19 100000000 100000000 20000000 2 [1,3,224,224] 3 0
-```
-
-In the above command:
-
-- `vgg19` is the model name, which corresponds to the model file's name. Others: `resnet152`, `mobilenetv2`, etc.
-- The first `100000000` is the total memory budget in Bytes.
-- The second `100000000` is the maximum conv layer size after slicing which is with the memory budget.
-- `20000000` is the maximum fc layer size after slicing which is also within the memory budget. We use a relatively small value to ensure the loading is overlapped with computing.
-- `2` is the number of computing threads, which is no larger than the number of big cores.
-- `[1,3,224,224]` is the input shape during evaluation, which is fixed for each model. Use `[1,3,384,384]` for vit only.
-- `3` is the loading powersave mode which indicates that we prefer using the middle core for loading (1 for small, 2 for big).
-- `0` is the log level (optional to use `1`, `2`).
 
 You can modify arguments in this command to try other configurations.
 
@@ -276,7 +182,7 @@ You can modify arguments in this command to try other configurations.
 
 ### Experimental Setup
 
-We hereby provide some implementation-related experimental details. You can refer to the overall settings in $\S 5.1$ of the paper, or directly [conduct the experiments](#experiment-workflow).
+We hereby provide some implementation-related experimental details. You can refer to the overall settings in [conduct the experiments](#experiment-workflow).
 
 #### Evaluated Models
 
@@ -284,12 +190,12 @@ We use the following models during evaluation. Since our approach doesn't change
 
 | Full Name          | Alias in Files |
 | ------------------ | -------------- |
-| VGG-19             | vgg19          |
-| ResNet-152         | resnet152      |
-| MobileNetV2        | mobilenetv2    |
-| SqueezeNet         | squeezenet     |
-| Vision Transformer | vit            |
-| GPT-2              | gpt2           |
+| SewResnet18        | sewresnet18    |
+| SewResnet34        | sewresnet34    |
+| Spikformer256      | spikformer256  |
+| Spikformer384      | spikformer384  |
+| SpikingVGG9        | spikingvgg9    |
+| SpikingVGG16       | spikingvgg16   |
 
 #### Baselines
 
@@ -301,27 +207,25 @@ All the baselines are based on NCNN:
 
 #### Key Metrics
 
-- **Inference latency**. Measured in the program itself. Unless specified otherwise, we run 8 loops of inference with 4 loops of warm-up, and calculate the average latency of the 8 loops.
-- **Memory Usage**. Measured through the `pmap` tool. Note that the memory usage of FlexNN and NCNN themselves (i.e., the idle memory usage) is ignored in the final results.
-- **Energy Comsumption**. Indirectly calculated by the real-time battery voltage and current, which are obtained through the Linux sysfs.
+- **Inference latency**. Measured in the program itself. Unless specified otherwise, we run 32 loops of inference for one of four configs, and calculate the latency for each config.
+- **Memory Usage**. We measure memory usage through reading the VmRSS values from proc file, so the results are bigger from the memory budgets you set, but the trend is in line with expectations.
+- **Energy Consumption**. Indirectly calculated by the real-time voltage and current, which are obtained through the Linux hwmon hardware monitor.
 
 #### Number of cores
 
-Regarding the ARM big.LITTLE technology, we use all the big cores for computing and one little core for loading (or middle core, regarding the device specification) when running inference with FlexNN, and we use only the same number of big cores in baselines.
+Regarding the ARM big.LITTLE technology, we use all the big cores for computing and one little core for loading (or middle core, regarding the device specification) when running inference with MASI, and we use only the same number of big cores in baselines.
 
 We don't add a little/middle core for computing in baselines because results have shown that the little/middle core will become the bottleneck and further increase inference latency in baselines.
 
-When running on devices that don't have a little/middle core (e.g., the Raspberry Pi), we use a big core for loading instead.
+When running on devices that don't have a little/middle core, we use a big core for loading instead.
 
 ### Experiment Workflow
 
 Before running the experiments, double-check that:
 
-- You have **root access** to the deivce.
+- You have **root access** to the device for specific experiment (Root access is a must for measure memory usage and energy consumption).
   - Linux: `sudo -i`
-  - Android: `su`
-- You have given the scripts execution permission.
-  - `chmod 0777 *.sh`
+  - Android: `su` 
 - You have turned off any power-saving settings.
   - See settings if you use a smartphone.
 - For energy evaluation (wireless devices only, smartphones for example):
@@ -329,119 +233,50 @@ Before running the experiments, double-check that:
   - The screen is turned off.
   - There are no other background processes.
 
-Below are instructions to run the experiments step-by-step, where `<n>` is the number of big cores for computing. You can keep other arguments as is. Note that the 4-second idle duration is for collecting idle memory usage to calculate the actual memory used for DNN inference only.
+#### latency-memory-tradeoff comparison
 
-#### End-to-End
-
-Estimated time: 0.5~1 hour. There is a sleep duration between sets of experiments to avoid overheating.
+The result of this experiment shows in Figure 5, the time spent on it depends on the device, model, runtime parameters and, most important, the memory budget you set.
 
 ```bash
-./eval-end-to-end.sh <n> 3 10 4
-
-# Usage: exec <num_threads> [<loading_powersave> <sleep_duration> <idle_duration>]
+./bin/flexnndemo --ncnn_param your_ncnn_param_file --ncnn_bin your_ncnn_bin_file --flexnn_param your_flexnn_param_save_path --flexnn_bin your_flexnn_bin_save_path --result_path your_profile_file_save_path --conv_sz conv_limit --fc_sz fc_limit --loop_num loop_number --mode normal/ncnn_default/ncnn_direct_conv/ncnn_ondemand --input_shape input_shape --timestep T --memory_budgets memory_budget_size [--sampletime sample_time_interval --record record_level --seenn_threshold seenn_threshold_parameter]
 ```
 
-#### System Overhead
+If you want to testify the result of FlexNN or MASI, the mode should be set as 'normal', in addition, you need set the seenn_threshold to open the early exit mode so that you can testify the result of MASI.
 
-Estimated time: < 10 minutes.
+#### power monitoring
 
-Important: The script uses sysfs interface to get the real-time voltage and current of the battery, and then calculates the power. However, on different devices, the battery path (`/sys/class/power_supply/battery` on Google Pixel 6 Pro), the units (uV and uA on Google Pixel 6 Pro), and the positive/negative current's meaning (current > 0 means charging and current < 0 means discharging) might be different. Please check for your device and modify `eval-energy.sh` accordingly.
+The result of this experiment shows in Figure 7.
 
 ```bash
-./eval-overhead.sh <n> 3
-
-# Usage: exec <num_threads> [<loading_powersave>]
+./bin/flexnndemo --ncnn_param your_ncnn_param_file --ncnn_bin your_ncnn_bin_file --flexnn_param your_flexnn_param_save_path --flexnn_bin your_flexnn_bin_save_path --result_path your_profile_file_save_path --conv_sz conv_limit --fc_sz fc_limit --loop_num loop_number --mode normal/ncnn_default --input_shape input_shape --timestep T --memory_budgets memory_budget_size --sampletime sample_time_interval --record 1/2 --seenn_threshold seenn_threshold_parameter
 ```
+
+You can modify the sampletime to adjust the time interval for data sampling, we advise you to set it to around 50000. The record can be set as 1 if you want to check the pure information of memory and power usage, 
+or set it as 2 if you want to check the additional event information.
 
 #### Ablation Study
 
-Estimated time: < 10 minutes.
+The result of this experiment shows in Figure 9.
 
 ```bash
-./eval-ablation.sh <n> 3
-
-# Usage: exec <num_threads> [<loading_powersave>]
+./bin/flexnndemo --ncnn_param your_ncnn_param_file --ncnn_bin your_ncnn_bin_file --flexnn_param your_flexnn_param_save_path --flexnn_bin your_flexnn_bin_save_path --result_path your_profile_file_save_path --conv_sz conv_limit --fc_sz fc_limit --loop_num loop_number --mode normal --input_shape input_shape --timestep T --memory_budgets memory_budget_size [--jump jump_part --seenn_threshold seenn_threshold_parameter]
 ```
 
-#### Adaptive Demo
+If you want to testify the result of MASI, please set mode as 'normal' and set the seenn_threshold to open the early_exit mode. If you want to testify the result of w/o preloading and w/o planning, please set jump as '1' and '2' desperately.
+If you are not set the seenn_threshold, the result will be w/o early exit.
 
-Estimated time: < 10 minutes.
+#### Real-time latency and memory usage monitoring
+
+The result of this experiment shows in Figure 8.
 
 ```bash
-./eval-adaption.sh <n> 3 4
-
-# Usage: exec <num_threads> [<loading_powersave> <idle_duration>]
+./bin/flexnndemo --ncnn_param your_ncnn_param_file --ncnn_bin your_ncnn_bin_file --flexnn_param your_flexnn_param_save_path --flexnn_bin your_flexnn_bin_save_path --result_path your_profile_file_save_path --conv_sz conv_limit --fc_sz fc_limit --loop_num 32 --mode normal --input_shape input_shape --timestep T --memory_budgets memory_budget_size --seenn_threshold 0.3 --sampletime 50000 --record 1
 ```
 
-#### Retrieving Raw Results
-
-After conducting all the experiments, you will see all the raw results under the `results` folder in your device-side workspace. We provide scripts to retrieve these raw results.
-
-For Android devices with ADB connection, run:
-
-```bash
-chmod -R 0777 ./scripts/host/
-./scripts/host/adb-pull-all.sh
-```
-
-For other Linux devices with SFTP connection, run:
-
-```bash
-chmod -R 0777 ./scripts/host/
-./scripts/host/sftp-pull-all.sh
-```
-
-They will be pulled to `flexnn-root-dir/{results_datetime}` on your host machine.
-
-### Post-Processing
-
-The figures in the paper are manually made with Excel, which requires considerable effort to reproduce. As an alternative, we provide Python scripts to process and visualize these results to demonstrate their reproducibility.
-
-#### Steps
-
-Requirements to run the Python scripts (pre-installed in the provided Docker image):
-
-```bash
-# if you don't have python installed
-# apt-get update
-# apt-get install -y python3-pip
-pip3 install matplotlib numpy pandas scipy
-```
-
-In `<flexnn-root-dir>`, run:
-
-```bash
-# <results_folder> is the retrieved results (root) folder
-python ./scripts/plot/end2end.py <results_folder>
-python ./scripts/plot/overhead.py <results_folder>
-python ./scripts/plot/ablation.py <results_folder>
-python ./scripts/plot/adaption.py <results_folder>
-```
-
-After executing the scripts, the figures will be stored in `<results_folder>/figures`. Besides, you can directly read the time and storage overhead in `<results_folder>/overhead/time.csv` and `<results_folder>/overhead/size.csv`.
-
-#### Expected Results
-
-Generally, you are expected to see figures similar to the paper. Regarding each experiment:
-
-- End-to-end: you should see FlexNN achieving better latency-memory tradeoffs. Specifically, FlexNN's curve is on the down left of the x-y plane.
-- Overhead: you should see a time overhead of around 1 second, depending on the device's performance, and there should be about a 5~10% increase in energy consumption of FlexNN.
-- Ablation: you should see FlexNN outperforming the others, with the lowest latency.
-- Adaptive Demo: you should see FlexNN achieving lower latency with a higher memory budget, and the actual memory usage is strictly limited within the given memory budget.
-
-Acceptable variation of the results:
-
-- Latency: there might be performance fluctuations within a 5~10% range, depending on the target device. Ensuring that there are no background apps will to some extent mitigate this issue.
-- Memory: there might be a 5% varying range for measured peak memory of baselines, depending on the real-time sampling rate. Note that FlexNN's memory is pre-allocated and won't change dynamically, so the measured results are very accurate.
-- Energy: the energy result is highly dependent on the device, but you should at least see FlexNN having higher energy consumption than NCNN.
+You can check the change of memory usage and the inference latency in different memory budgets you set in parameter 'memory_budgets', e.g., `--memory_budgets 24,68,134,180`. The result will save in result_path/infer_time.txt.
 
 ## Limitations
 
-There are some known issues and limitations with the current FlexNN implementation:
-
-- Performance fluctuations. According to the evaluation results, the latency of FlexNN tends to have a larger variance than that of NCNN. This indicates that despite the latency saving, the computing-loading overlapping scheme might be less robust against a dynamic runtime environment.
-- Limited operators. FlexNN is designed to support a wide range of DNN models and operators. However, the current implementation is mainly implemented and optimized for "classic" CNNs including VGGNets, ResNets, MobileNets and SqueezeNets. The user would need to mannually add the operators and slicing strategy to support new models.
-- GPT-2 slicing bug. The aarch64-built `flexnnslice` might encounter a segmentation fault when slicing the GPT-2 model (and GPT-2 only). We've provided models sliced with the x86_64-built `flexnnslice`, which works fine, to avoid this issue. The reason is not clear yet since `flexnnslice` doesn't involve platform-specific codes
-(e.g., #ifdef aarch64).
+There are some known issues and limitations with the current MASI implementation.
 
 GitHub issues and emails are welcome if you find any other issues.
